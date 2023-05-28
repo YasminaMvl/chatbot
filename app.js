@@ -3,8 +3,9 @@ const app = express();
 const path = require('path');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const sequelize = require('./config/db');
-const routes = require('./config/routes');
+const sequelize = require('./app/config/database');
+const routes = require('./app/config/routes');
+require('dotenv').config(); // Ajout de cette ligne pour charger les variables d'environnement
 
 // Middleware
 app.use(express.json());
